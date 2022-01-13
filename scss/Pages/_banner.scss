@@ -1,0 +1,37 @@
+#banner {
+    .container__config {
+        width: 100%;
+        margin: auto;
+        padding: 0 $pd-9;
+        .banner__left,
+        .banner__right {
+            height: 370px;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            margin-bottom: $mg-3;
+            .banner__text {
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                text-align: center;
+                transform: translateX(-50%);
+                width: 100%;
+                padding: 0 $pd-2 - 2;
+                h4 {
+                    @include styleText($color-white-0, $fs-2, $fw-bold);
+                }
+                p {
+                    @include styleText($color-white-0, $fs-1 - 2, $fw-400);
+                    padding: $pd-0 0;
+                }
+            }
+        }
+        .banner__left {
+            background-image: url("../../img/option-2.webp");
+        }
+        .banner__right {
+            background-image: url("../../img/option-1.jpg");
+        }
+    }
+}

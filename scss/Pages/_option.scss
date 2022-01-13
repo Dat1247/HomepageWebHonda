@@ -1,0 +1,29 @@
+#option {
+    background-color: $color-gray-0;
+    padding: $pd-6 $pd-2 - 2;
+    .option__item {
+        background-color: $color-white-0;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+        padding: $pd-3;
+        border-radius: 6px;
+        margin-bottom: $mg-2;
+        color: $color-blue-5;
+        text-align: center;
+        cursor: pointer;
+        i {
+            font-size: $fs-6;
+        }
+        h4 {
+            font-size: $fs-1;
+            font-weight: $fw-bold;
+            margin: $mg-4 0 $mg-3;
+        }
+        &:hover {
+            .btnBlue {
+                color: $color-blue-0;
+                background-color: transparent;
+                border-color: $color-blue-0;
+            }
+        }
+    }
+}

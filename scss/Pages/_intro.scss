@@ -1,0 +1,46 @@
+#intro {
+    margin-top: $mg-11;
+    .container__config {
+        width: 100%;
+        margin: auto;
+        padding: 0 $pd-9;
+        .intro__img {
+            height: 350px;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            .intro__content {
+                h4 {
+                    @include styleText($color-white-0, $fs-1 + 2, $fw-bold);
+                }
+            }
+        }
+        .intro__left {
+            margin-bottom: $mg-3;
+            .intro__img {
+                background-color: #000;
+                background-image: url("../img/our-vehicle-intro-1.jpg");
+                .intro__content {
+                    text-align: center;
+                    position: absolute;
+                    bottom: 5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                }
+            }
+        }
+        .intro__right {
+            .intro__img {
+                background-image: url("../img/our-vehicles-intro-2.jpg");
+                .intro__content {
+                    width: 50%;
+                    position: absolute;
+                    left: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

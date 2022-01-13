@@ -1,0 +1,139 @@
+#our-vehicle {
+    .carousel {
+        height: 600px;
+    }
+    .carousel-inner,
+    .carousel-item {
+        height: 95%;
+    }
+    h1 {
+        @include styleText($color-blue-2, $fs-5, $fw-300);
+        margin: $mg-3 0 $mg-4;
+    }
+    .carousel-indicators-config {
+        margin-bottom: $mg-2;
+        li {
+            @include styleText($color-blue-2, $fs-1 - 2, $fw-bold);
+            padding: $pd-0 $pd-2 - 2;
+            border-radius: 40px;
+            cursor: pointer;
+            &.active {
+                color: $color-white-0;
+                background-color: $color-blue-0;
+                position: relative;
+                &::before {
+                    content: "";
+                    border-top: 15px solid $color-white-0;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -14px - $mg-2;
+                    transform: translateX(-50%);
+                    z-index: 15;
+                }
+            }
+        }
+    }
+    .carousel-indicators-xs {
+        width: 60%;
+        margin: auto;
+        background-color: $color-white-0;
+        border: 1px solid $color-gray-5;
+        .indicators-xs-header {
+            padding: 0 $pd-1;
+        }
+        h3 {
+            margin: $mg-1;
+            padding: $pd-1 0;
+            margin-right: auto;
+            @include styleText($color-blue-3, $fs-0 + 2, $fw-400);
+            span {
+                font-weight: $fw-bold;
+                color: $color-blue-1
+            }
+        }
+        i {
+            font-size: $fs-3;
+            color: $color-blue-3;
+            transition: transform 0.5s;
+        }
+        ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border-top: 1px solid $color-gray-5;
+            display: none;
+            li {
+                @include styleText($color-blue-2, $fs-0 + 2, $fw-bold);
+                padding: $pd-0;
+                cursor: pointer;
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        i {
+            background-color: $color-blue-overlay;
+            font-size: $fs-4;
+            padding: $pd-2 $pd-1;
+            border-radius: 0.9rem;
+            &::after {
+                font-size: $fs-4 - 9;
+            }
+        }
+    }
+    .carousel-caption-config {
+        width: 30%;
+        position: absolute;
+        top: 8%;
+        left: 7%;
+        color: $color-white-0;
+        font-size: $fs-1 - 2;
+        &>p {
+            font-weight: $fw-bold;
+            span {
+                font-weight: $fw-400;
+            }
+        }
+        .caption-content {
+            font-weight: $fw-300;
+            margin-bottom: $mg-3;
+        }
+        .carousel-caption-detail {
+            margin-bottom: $mg-3;
+            .carousel-detail-content {
+                h2 {
+                    font-weight: $fw-300;
+                    font-size: $fs-4;
+                }
+                p {
+                    font-size: $fs-1 - 2;
+                    font-weight: $fw-bold;
+                }
+            }
+        }
+        img {
+            width: 50%;
+            transform: translateX($pd-1 * (-1));
+        }
+    }
+    .carousel-caption-footer {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 2px solid $color-gray-7;
+        a {
+            @include styleText($color-white-0, $fs-1 - 2, $fw-bold)
+        }
+    }
+}
+
+.transform-rotate {
+    transform: rotate(180deg);
+}
+
+.d-fluid {
+    max-width: 100%;
+}

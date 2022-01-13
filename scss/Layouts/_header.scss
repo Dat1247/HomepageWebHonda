@@ -1,0 +1,199 @@
+header {
+    background-color: $color-blue-0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        .navbar-brand {
+            padding: 0;
+        }
+        .navbar-icon,
+        button {
+            i {
+                @include styleText($color-white-0, $fs-2 + 2, $fw-600);
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                &:nth-child(1),
+                &:nth-child(2) {
+                    .nav-link {
+                        padding: $pd-1 - 2 $pd-3;
+                        border-left: 1px solid $color-white-0;
+                    }
+                }
+                &:nth-child(2) {
+                    .nav-link {
+                        border-right: 1px solid $color-white-0;
+                    }
+                }
+                .nav-link {
+                    @include styleText($color-white-0, $fs-1 - 2, $fw-600);
+                    padding: $pd-1 - 2 $pd-1;
+                    background-image: linear-gradient(to bottom, $color-white-0 50%, transparent 0);
+                    background-size: 200% 200%;
+                    background-position: 0 100%;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        background-position: 0 0;
+                        color: $color-blue-1;
+                    }
+                }
+                &.active {
+                    .nav-link {
+                        background-position: 0 0;
+                        color: $color-blue-1;
+                    }
+                }
+            }
+            .form__search {
+                padding: $pd-1 - 2;
+                form {
+                    text-align: center;
+                    max-width: 500px;
+                    margin: 0 auto;
+                    position: relative;
+                    input {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #00324f;
+                        padding: 10px 0 10px 34px;
+                        width: 100%;
+                        border-radius: 35px;
+                        border: 0;
+                        background-color: #ffffff;
+                        box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+                    }
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 1rem;
+                        transform: translateY(-50%);
+                        color: #007cc0;
+                    }
+                    button {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 1rem;
+                        cursor: pointer;
+                        border: 2px solid transparent;
+                        border-radius: 1.95rem;
+                        background-color: #007cc0;
+                        color: #ffffff;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 0 18px;
+                    }
+                }
+            }
+        }
+    }
+    #shopping {
+        border: none;
+        background-color: $color-white-0;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+        padding: 14px 24px 36px;
+        width: 850px;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        top: 100%;
+        right: 3%;
+        ul {
+            list-style: none;
+        }
+        .tool__icon,
+        .tool__value {
+            display: flex;
+            align-items: center;
+        }
+        .tool__icon {
+            border-bottom: 1px solid #e8e8e8;
+            a {
+                text-align: center;
+                text-decoration: none;
+                color: $color-blue-5;
+                padding: 36px 14px 28px;
+                display: block;
+                i {
+                    font-size: $fs-4;
+                    margin: 0 40px;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: #00324f;
+                    margin-bottom: 0;
+                    margin-top: 24px;
+                }
+            }
+            .lineHeight {
+                width: 1px;
+                height: 83px;
+                border-right: 1px solid #e8e8e8;
+            }
+        }
+        .tool__value {
+            justify-content: space-evenly;
+            margin-bottom: 0;
+            a {
+                @include styleText($color-blue-0, $fs-1 - 2, $fw-700);
+            }
+        }
+    }
+    .owners {
+        background-color: #ffffff;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+        padding: 36px;
+        display: flex;
+        width: 590px;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        border-radius: 0 0 4px 4px;
+        transition: all 0.5s;
+        z-index: -1;
+        .owners__left,
+        .owners__right {
+            margin-right: 70px;
+            position: relative;
+            ul {
+                list-style: none;
+                margin-bottom: 0;
+                li {
+                    margin-bottom: 17px;
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #007cc0;
+                        i {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .owners__left {
+            ul {
+                &::after {
+                    content: "";
+                    width: 2px;
+                    height: 170px;
+                    background-color: #c4c4c4;
+                    position: absolute;
+                    top: 0;
+                    right: -37px;
+                }
+            }
+        }
+    }
+    .hide-shopping {
+        display: none;
+    }
+}

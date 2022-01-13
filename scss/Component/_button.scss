@@ -1,0 +1,26 @@
+.btnRed {
+    @include styleButton($color-white-0, $color-red-0, transparent, $fs-1 - 2, $pd-0 - 4 $pd-3, $color-red-0, $color-white-0, $color-red-0, 1.95rem);
+}
+
+.btnBlue {
+    @include styleButton($color-white-0, $color-blue-0, transparent, $fs-1 - 2, $pd-0 - 5 $pd-2 - 2, $color-blue-0, transparent, $color-blue-0, 1.95rem);
+}
+
+.btnWhite {
+    @include styleButton($color-blue-0, transparent, $color-blue-0, $fs-0 + 2, $pd-0 - 4 $pd-3, $color-white-0, $color-blue-0, $color-blue-0, 1.95rem);
+}
+
+.btnIntro {
+    @include styleButton($color-white-0, transparent, $color-white-0, $fs-1, $pd-0 - 5 $pd-2 - 2, $color-blue-0, $color-white-0, $color-blue-0, 1.95rem);
+}
+
+.btn-caption {
+    padding: $pd-0 - 3 $pd-4;
+    @media screen and (max-width: 575.98px) {
+        font-size: $fs-1 - 2;
+        padding: $pd-0 - 3 $pd-3;
+    }
+    @media screen and (max-width: 991.98px) {
+        padding: $pd-0 - 5 $pd-2 + 3;
+    }
+}

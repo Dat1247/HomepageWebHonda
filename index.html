@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Project 7/5/2021</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+
+    <link rel="stylesheet" href="./css/vivify.min.css">
+
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <div class="navbar-icon ml-auto d-block d-lg-none">
+                <i class="fa fa-map-marker-alt"></i>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+               <i class="fa fa-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="vehicleMenu">
+                        <a href="#" class="nav-link">VEHICLES
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item " id="shoppingTool">
+                        <a href="#shopping" class="nav-link">
+                                SHOPPING TOOL
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+
+
+                    </li>
+                    <li class="nav-item" id="owner">
+                        <a href="#owners" class="nav-link">Owner
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown" id="discover">
+                        <a href="#" class="nav-link">Discovers
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                            Dropdown link
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div> -->
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">English</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="#" class="nav-link"><i class="fa fa-map-marker-alt mr-2"></i>Dealers</a>
+                    </li>
+                    <li class="form__search d-block d-lg-none">
+                        <form>
+                            <input id="inputSearch" type="text" placeholder="Search for anything Honda">
+                            <i class="fa fa-search"></i>
+                            <button id="btnGo">GO</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="vehicles" class="hide-vehicles">
+            <section class="container-fluid container--config" id="vehicles-content">
+                <nav class="vehicles-nav row vivify">
+                    <div class="col-12">
+                        <ul>
+                            <li class="active">
+                                <a href="#" id="suvs-nav">SUVS & CROSSOVER</a>
+                            </li>
+                            <li>
+                                <a href="#" id="cars-nav">CARS</a>
+                            </li>
+                            <li>
+                                <a href="#" id="minivan-nav">MINIVAN & TRUCK</a>
+                            </li>
+                            <li>
+                                <a href="#" id="electrified-nav">ELECTRIFIED</a>
+                            </li>
+                            <li>
+                                <a href="#" id="future-nav">FUTURE</a>
+                            </li>
+                            <li>
+                                <a href="#">PRE-OWNED</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="vehicles-close" class="vivify">
+                    <div class="vehicle-circle">
+                        <i class="fa fa-times"></i>
+                    </div>
+                    <p class="mb-0">CLOSE</p>
+                </div>
+                <div id="vehicles-list" class="vivify">
+                    <div class="row">
+                        <div class="col-12" id="suvs">
+                            <hr size="2" class="line">
+                            <div class="vehicles-title text-center">
+                                <h4 class="d-inline">
+                                    SUVS & CROSSOVER
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-1">
+                            <div class="vehicle-img" id="img-1">
+                                <img src="./img/xe-1.png" alt="" class="img-fluid">
+                                <img src="./img/xe-1-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-2">
+                            <div class="vehicle-img" id="img-2">
+                                <img src="./img/xe-2.png" alt="" class="img-fluid">
+                                <img src="./img/xe-2-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-3">
+                            <div class="vehicle-img" id="img-3">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-4">
+                            <div class="vehicle-img" id="img-4">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-5">
+                            <div class="vehicle-img" id="img-5">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product delay-6">
+                            <div class="vehicle-img" id="img-6">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12" id="cars">
+                            <hr size="2" class="line">
+                            <div class="vehicles-title text-center">
+                                <h4 class="d-inline">
+                                    CARS
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-1">
+                                <img src="./img/xe-1.png" alt="" class="img-fluid">
+                                <img src="./img/xe-1-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-2">
+                                <img src="./img/xe-2.png" alt="" class="img-fluid">
+                                <img src="./img/xe-2-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-3">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-4">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-5">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12" id="minivan">
+                            <hr size="2" class="line">
+                            <div class="vehicles-title text-center">
+                                <h4 class="d-inline">
+                                    MINIVAN & TRUCK
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-1">
+                                <img src="./img/xe-1.png" alt="" class="img-fluid">
+                                <img src="./img/xe-1-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-2">
+                                <img src="./img/xe-2.png" alt="" class="img-fluid">
+                                <img src="./img/xe-2-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-3">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-4">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-5">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-6">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12" id="electrified">
+                            <hr size="2" class="line">
+                            <div class="vehicles-title text-center">
+                                <h4 class="d-inline">
+                                    ELECTRIFIED
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-1">
+                                <img src="./img/xe-1.png" alt="" class="img-fluid">
+                                <img src="./img/xe-1-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-2">
+                                <img src="./img/xe-2.png" alt="" class="img-fluid">
+                                <img src="./img/xe-2-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-3">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-4">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-5">
+                                <img src="./img/xe-3.png" alt="" class="img-fluid">
+                                <img src="./img/xe-3-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 vehicle-product">
+                            <div class="vehicle-img" id="img-6">
+                                <img src="./img/xe-4.png" alt="" class="img-fluid">
+                                <img src="./img/xe-4-hover.png" alt="" class="img-fluid">
+                            </div>
+                            <h2 class="text-center">Civic Sedan</h2>
+                            <div class="vehicle-info d-flex justify-content-around">
+                                <div class="vehicle-info__left">
+                                    <h4>$18,840</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                                <div class="vehicle-info__right">
+                                    <h4>40/28</h4>
+                                    <p>Staring</p>
+                                    <p>MSRP</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-button text-center">
+                                <button class="btn btnBlue">EXPLORE</button>
+                                <button class="btn btnWhite">BUILD</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <section id="shopping" class="hide-shopping vivify">
+            <div>
+                <div class="dropdown-top">
+                    <ul class="tool__icon">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-tools"></i>
+                                <p>Build &amp; Price</p>
+                            </a>
+                        </li>
+                        <div class="lineHeight"></div>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bookmark"></i>
+                                <p>See Offers</p>
+                            </a>
+                        </li>
+                        <div class="lineHeight"></div>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-search"></i>
+                                <p>Search Inventory</p>
+                            </a>
+                        </li>
+                        <div class="lineHeight"></div>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calculator"></i>
+                                <p>Estimate Payments</p>
+                            </a>
+                        </li>
+                        <div class="lineHeight"></div>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-tv"></i>
+                                <p>Buy Online</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown-bottom">
+                    <ul class="tool__value">
+                        <li>
+                            <a href="#">
+                        Trade-In Value <i class="fa fa-share-square"></i>
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                       Honda Financial Services <i class="fa fa-share-square"></i>
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                        Buyer's Guide <i class="fa fa-share-square"></i>
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                        Apply For Financing <i class="fa fa-share-square"></i>
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="owners" class="hide-shopping vivify">
+            <div class="owners">
+                <div class="owners__left">
+                    <ul>
+                        <li>
+                            <a href="#">Owners Site <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Owner's Manual &amp; Warranties <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Schedule Service <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Shop Parts &amp; Accessories <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Certified Body Shop Locator <i class="fa fa-share-square"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="owners__right">
+                    <ul>
+                        <li>
+                            <a href="#">Roadsite Assistance <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Pay My Bill <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Recalls <i class="fa fa-share-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Customer Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section id="swiper-slider">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide-1">
+                </div>
+                <div class="swiper-slide slide-2">
+
+                </div>
+                <div class="swiper-slide slide-3">
+                </div>
+                <div class="swiper-slide slide-4">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-explore">
+                <button class="btn btnRed">
+                    EXPLORE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="intro">
+        <div class="container__config">
+            <div class="row">
+                <div class="col-12 col-lg-6 intro__left">
+                    <div class="intro__img">
+                        <div class="intro__content">
+                            <h4>Adventure awaits in the restyled Ridgeline.</h4>
+                            <button class="btn btnIntro">
+                                EXPlORE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 intro__right">
+                    <div class="intro__img">
+                        <div class="intro__content">
+                            <h4>Sporty. Versatile. Ready for anything.</h4>
+                            <button class="btn btnIntro">
+                                LEARN MORE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR VEHICLES -->
+    <section id="our-vehicle">
+        <h1 class="text-center">Our Vehicles</h1>
+        <div class="carousel slide" data-ride="carousel" id="our-vehicle-slider">
+            <ol class="carousel-indicators-config d-none d-md-flex list-unstyled justify-content-around w-75 mx-auto">
+                <li class="active" data-slide-to="0" data-target="#our-vehicle-slider">CARS</li>
+                <li data-slide-to="1" data-target="#our-vehicle-slider">CROSSOVER & SUV</li>
+                <li data-slide-to="2" data-target="#our-vehicle-slider">MINIVAN & TRUCK</li>
+                <li data-slide-to="3" data-target="#our-vehicle-slider">ENVIRONMENTAL</li>
+                <li data-slide-to="4" data-target="#our-vehicle-slider">FUTURE</li>
+            </ol>
+            <div class="carousel-indicators-xs d-block d-md-none">
+                <div class="d-flex align-items-center indicators-xs-header">
+                    <h3 class="indicators-title">
+                        VEHICLES CATEGORIES <br>
+                        <span>CARS</span>
+                    </h3>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <ol>
+                    <li data-slide-to="0" data-target="#our-vehicle-slider">CARS</li>
+                    <li data-slide-to="1" data-target="#our-vehicle-slider">CROSSOVER & SUV</li>
+                    <li data-slide-to="2" data-target="#our-vehicle-slider">MINIVAN & TRUCK</li>
+                    <li data-slide-to="3" data-target="#our-vehicle-slider">ENVIRONMENTAL</li>
+                    <li data-slide-to="4" data-target="#our-vehicle-slider">FUTURE</li>
+                </ol>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active item-1">
+                    <!-- <img src="./img/slider-1.jpg" alt="" class="d-fluid d-none d-md-block">
+                    <img src="./img/slider-1-xs.jpg" alt="" class="img-fluid d-block d-md-none"> -->
+                    <div class="carousel-caption-config">
+                        <p>CAR 1 <span>/12</span></p>
+                        <img src="./img/civic-logo.jpg" alt="" class="img-fluid">
+                        <p class="caption-content d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti aliquam magni soluta hic voluptate ducimus deserunt quas totam veniam omnis</p>
+                        <div class="carousel-caption-detail d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,770</h2>
+                                <p>STARTING MSRP</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY MPG RATING</p>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btn-caption">EXPLORE</button>
+                        <button class="btn btnIntro btn-caption">BUILD</button>
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">
+                            EXPLORE THE ACCORD FAMILY >
+                        </a>
+                        <img src="./img/accord-family-vehicles-2x.png" alt="" class="d-fluid d-none d-lg-block">
+                    </div>
+                </div>
+                <div class="carousel-item item-2">
+                    <!-- <img src="./img/slider-2.jpg" alt="" class="d-fluid d-none d-md-block">
+                    <img src="./img/slider-2-xs.jpg" alt="" class="img-fluid d-block d-md-none"> -->
+                    <div class="carousel-caption-config">
+                        <p>CAR 1 <span>/12</span></p>
+                        <img src="./img/civic-logo.jpg" alt="" class="img-fluid">
+                        <p class="caption-content d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti aliquam magni soluta hic voluptate ducimus deserunt quas totam veniam omnis</p>
+                        <div class="carousel-caption-detail d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,770</h2>
+                                <p>STARTING MSRP</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY MPG RATING</p>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btn-caption">EXPLORE</button>
+                        <button class="btn btnIntro btn-caption">BUILD</button>
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">
+                            EXPLORE THE ACCORD FAMILY >
+                        </a>
+                        <img src="./img/accord-family-vehicles-2x.png" alt="" class="d-fluid d-none d-lg-block">
+                    </div>
+                </div>
+                <div class="carousel-item item-3">
+                    <!-- <img src="./img/slider-3.jpg" alt="" class="d-fluid d-none d-md-block">
+                    <img src="./img/slider-3-xs.jpg" alt="" class="img-fluid d-block d-md-none"> -->
+                    <div class="carousel-caption-config">
+                        <p>CAR 1 <span>/12</span></p>
+                        <img src="./img/civic-logo.jpg" alt="" class="img-fluid">
+                        <p class="caption-content d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti aliquam magni soluta hic voluptate ducimus deserunt quas totam veniam omnis</p>
+                        <div class="carousel-caption-detail d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,770</h2>
+                                <p>STARTING MSRP</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY MPG RATING</p>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btn-caption">EXPLORE</button>
+                        <button class="btn btnIntro btn-caption">BUILD</button>
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">
+                            EXPLORE THE ACCORD FAMILY >
+                        </a>
+                        <img src="./img/accord-family-vehicles-2x.png" alt="" class="d-fluid d-none d-lg-block">
+                    </div>
+                </div>
+                <div class="carousel-item item-4">
+                    <!-- <img src="./img/slider-4.jpg" alt="" class="d-fluid d-none d-md-block">
+                    <img src="./img/slider-4-xs.jpg" alt="" class="img-fluid d-block d-md-none"> -->
+                    <div class="carousel-caption-config">
+                        <p>CAR 1 <span>/12</span></p>
+                        <img src="./img/civic-logo.jpg" alt="" class="img-fluid">
+                        <p class="caption-content d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti aliquam magni soluta hic voluptate ducimus deserunt quas totam veniam omnis</p>
+                        <div class="carousel-caption-detail d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,770</h2>
+                                <p>STARTING MSRP</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY MPG RATING</p>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btn-caption">EXPLORE</button>
+                        <button class="btn btnIntro btn-caption">BUILD</button>
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">
+                            EXPLORE THE ACCORD FAMILY >
+                        </a>
+                        <img src="./img/accord-family-vehicles-2x.png" alt="" class="d-fluid d-none d-lg-block">
+                    </div>
+                </div>
+                <div class="carousel-item item-5">
+                    <!-- <img src="./img/slider-5.jpg" alt="" class="d-fluid d-none d-md-block">
+                    <img src="./img/slider-5-xs.jpg" alt="" class="img-fluid d-block d-md-none"> -->
+                    <div class="carousel-caption-config">
+                        <p>CAR 1 <span>/12</span></p>
+                        <img src="./img/civic-logo.jpg" alt="" class="img-fluid">
+                        <p class="caption-content d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corrupti aliquam magni soluta hic voluptate ducimus deserunt quas totam veniam omnis</p>
+                        <div class="carousel-caption-detail d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,770</h2>
+                                <p>STARTING MSRP</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY MPG RATING</p>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btn-caption">EXPLORE</button>
+                        <button class="btn btnIntro btn-caption">BUILD</button>
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">
+                            EXPLORE THE ACCORD FAMILY >
+                        </a>
+                        <img src="./img/accord-family-vehicles-2x.png" alt="" class="d-fluid d-none d-lg-block">
+                    </div>
+                </div>
+            </div>
+            <a href="#our-vehicle-slider" class="carousel-control-prev" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="#our-vehicle-slider" class="carousel-control-next" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- OPTION -->
+    <section id="option">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <div class="option__item">
+                        <i class="fa fa-tools"></i>
+                        <h4>Build and Price</h4>
+                        <button class="btn btnBlue">GO</button>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="option__item">
+                        <i class="fa fa-bookmark"></i>
+                        <h4>Build and Price</h4>
+                        <button class="btn btnBlue">GO</button>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="option__item">
+                        <i class="fa fa-search"></i>
+                        <h4>Build and Price</h4>
+                        <button class="btn btnBlue">GO</button>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="option__item">
+                        <i class="fa fa-calculator"></i>
+                        <h4>Build and Price</h4>
+                        <button class="btn btnBlue">GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section id="banner">
+        <div class="container__config">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="banner__left">
+                        <div class="banner__text">
+                            <button class="btn btnBlue">SHOP CERTIFIED</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="banner__right">
+                        <div class="banner__text">
+                            <h4>How-To Videos and Guides</h4>
+                            <p>Find owner manuals, instructional guides, how-to videos and helpful links designed to help you make the most of your Honda.</p>
+                            <button class="btn btnBlue">GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer__line"></div>
+            <img src="./img/footer-honda.png" alt="logo" class="footer__logo">
+            <div class="footer__contact d-flex align-items-end">
+                <div class="footer__left">
+                    <p class="d-none d-md-block">Stay In Touch</p>
+                    <div class="footer__icon d-flex">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-itunes-note"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="footer__search d-none d-lg-block">
+                    <input id="inputSearch" type="text" placeholder="Search for anything Honda">
+                    <i class="fa fa-search"></i>
+                    <button class="btn btnBlue">GO</button>
+                </form>
+                <div class="footer__right text-right">
+                    <p>Receive the latest news and exclusive updates.</p>
+                    <button class="btn btnWhite ">STAY INFORMED</button>
+                </div>
+            </div>
+            <form class="footer__search-footer d-block d-lg-none">
+                <input id="inputSearch" type="text" placeholder="Search for anything Honda">
+                <i class="fa fa-search"></i>
+                <button class="btn btnBlue">GO</button>
+            </form>
+            <div class="footer__link d-block d-lg-flex justify-content-between">
+                <div class="footer__detail">
+                    <h1 class="d-none d-lg-block">Vehicles</h1>
+                    <h1 class="d-flex d-lg-none justify-content-between align-items-center" data-toggle="collapse" data-target="#vehicles-footer">Vehicles <i class="fa fa-plus"></i></h1>
+                    <div id="vehicles-footer" class="collapse-ul collapse">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Civic Models</a>
+                            </li>
+                            <li>
+                                <a href="#">Insight Hybrid</a>
+                            </li>
+                            <li>
+                                <a href="#">Accord Models</a>
+                            </li>
+                            <li>
+                                <a href="#">Clarity Models</a>
+                            </li>
+                            <li>
+                                <a href="#">Fit Hatchback</a>
+                            </li>
+                            <li>
+                                <a href="#">HR-V Crossover</a>
+                            </li>
+                            <li>
+                                <a href="#">CR-V Crossover</a>
+                            </li>
+                            <li>
+                                <a href="#">Passport SUV</a>
+                            </li>
+                            <li>
+                                <a href="#">Pilot SUV</a>
+                            </li>
+                            <li>
+                                <a href="#">Odyssey Minivan</a>
+                            </li>
+                            <li>
+                                <a href="#">Ridgeline Truck</a>
+                            </li>
+                            <li>
+                                <a href="#">Future Vehicles</a>
+                            </li>
+                            <li>
+                                <a href="#">Rugged Capability</a>
+                            </li>
+                            <li>
+                                <a href="#">Electrified Vehicles</a>
+                            </li>
+                            <li>
+                                <a href="#">Honda Certified Pre-Owned</a>
+                            </li>
+                            <li>
+                                <a href="#">All Vehicles</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__detail">
+                    <h1 class="d-none d-lg-block">Shopping Tools</h1>
+                    <h1 class="d-flex d-lg-none justify-content-between align-items-center" data-toggle="collapse" data-target="#shoppingTools-footer">Shopping Tools <i class="fa fa-plus"></i></h1>
+                    <div id="shoppingTools-footer" class="collapse-ul collapse">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Build &amp; Price</a>
+                            </li>
+                            <li>
+                                <a href="#">See Offers</a>
+                            </li>
+                            <li>
+                                <a href="#">Search Inventory</a>
+                            </li>
+                            <li>
+                                <a href="#">Estimate Payments</a>
+                            </li>
+                            <li>
+                                <a href="#">Apply for Financing</a>
+                            </li>
+                            <li>
+                                <a href="#">Trade-In Value</a>
+                            </li>
+                            <li>
+                                <a href="#">Honda Financial Services</a>
+                            </li>
+                            <li>
+                                <a href="#">Lease or Finance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__detail">
+                    <h1 class="d-none d-lg-block">Discover Honda</h1>
+                    <h1 class="d-flex d-lg-none justify-content-between align-items-center" data-toggle="collapse" data-target="#discover-footer">Discover Honda <i class="fa fa-plus"></i></h1>
+                    <div id="discover-footer" class="collapse-ul collapse">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">News &amp; Events</a>
+                            </li>
+                            <li>
+                                <a href="#">Awards, Accolades &amp; Ratings</a>
+                            </li>
+                            <li>
+                                <a href="#">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#">Investor Relations</a>
+                            </li>
+                            <li>
+                                <a href="#">Corporate Social Responsibility</a>
+                            </li>
+                            <li>
+                                <a href="#">Honda in America</a>
+                            </li>
+                            <li>
+                                <a href="#">Honda Worldwide</a>
+                            </li>
+                            <li>
+                                <a href="#">Honda Merchandise &amp; Apparel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__detail">
+                    <h1 class="d-none d-lg-block">Help &amp; Support</h1>
+                    <h1 class="d-flex d-lg-none justify-content-between align-items-center" data-toggle="collapse" data-target="#support-footer">Help &amp; Support <i class="fa fa-plus"></i></h1>
+                    <div id="support-footer" class="collapse-ul collapse">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Mobility Assistance Program</a>
+                            </li>
+                            <li>
+                                <a href="#">Rear Entertainment System Accessibility for Individuals with Disabilities</a>
+                            </li>
+                            <li>
+                                <a href="#">Buyer’s Guide</a>
+                            </li>
+                            <li>
+                                <a href="#">COVID-19 Response</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__detail">
+                    <h1 class="d-none d-lg-block">Owners</h1>
+                    <h1 class="d-flex d-lg-none justify-content-between align-items-center" data-toggle="collapse" data-target="#owners-footer">Owners <i class="fa fa-plus"></i></h1>
+                    <div id="owners-footer" class="collapse-ul collapse">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Honda Owners Site</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Parts &amp; Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Certified Body Shop Locator</a>
+                            </li>
+                            <li>
+                                <a href="#">eStore</a>
+                            </li>
+                            <li>
+                                <a href="#">Roadside Assistance</a>
+                            </li>
+                            <li>
+                                <a href="#">Pay My Bill</a>
+                            </li>
+                            <li>
+                                <a href="#">Radio &amp; Navi Codes</a>
+                            </li>
+                            <li>
+                                <a href="#">HondaLink®</a>
+                            </li>
+                            <li>
+                                <a href="#">Wi-Fi Hotspot Data Plans</a>
+                            </li>
+                            <li>
+                                <a href="#">Safety Recall</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyRight">
+            <div class="copyRight__policy">
+
+                <div class="copyRight__left">
+                    <p> <a href="#"> ©2021 American Honda Motor Co.</a>, Inc. All information contained herein applies to U.S. vehicles only. For non-U.S.-distributor information go to <a href="#">world.honda.com.</a></p>
+                </div>
+                <div class="copyRight__right">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Prop 65 Info</a>
+                    <a href="#">Vehicle Data Privacy</a>
+                    <a href="#">SMS Terms</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Do Not Sell My Personal Infomation</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+            <div class="copyRight__logo">
+                <a href="#">
+                    <img src="./img/footer-logo-1.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-2.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-3.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-4.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-5.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-6.jpg" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-7.png" alt="">
+                </a>
+                <a href="#" class="d-none d-md-inline-block">
+                    <img src="./img/footer-logo-8.jpg" alt="">
+                </a>
+            </div>
+            <div class="copyRight__bottom">
+                <p>We use cookies to improve your experience on this site and show you personalized advertising. To find out more, read our <a href="#">Cookie Policy .</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            centeredSlide: true,
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
+        $("#vehicles-list").mCustomScrollbar({
+            theme: "dark"
+        });
+
+        function move(value) {
+            $("#vehicles-list").mCustomScrollbar("scrollTo", value, {
+                scrollEasing: "easeOut",
+            })
+        }
+        $(".vehicles-nav ul li a").click(function() {
+            if ($(this).attr("id") == "suvs-nav") {
+                move("#suvs")
+            }
+            if ($(this).attr("id") == "cars-nav") {
+                move("#cars")
+            }
+            if ($(this).attr("id") == "minivan-nav") {
+                move("#minivan")
+            }
+            if ($(this).attr("id") == "electrified-nav") {
+                move("#electrified")
+            }
+
+        })
+        let count = "";
+        $('#navbarMenu ul li').click(function() {
+            if (count === "") {
+                count = $(this).attr("id");
+                $(this).addClass("active");
+                if (count === "vehicleMenu") {
+                    $("#vehicles").removeClass("hide-vehicles");
+                    $(".vehicles-nav").removeClass("fadeOutTop");
+                    $(".vehicles-nav").addClass("fadeInTop");
+
+                    $("#vehicles-list").removeClass("fadeOutBottom");
+                    $("#vehicles-list").addClass("fadeInBottom");
+                }
+                if (count === "shoppingTool") {
+                    $("#shopping").removeClass("hide-shopping");
+                    $("#shopping").addClass("fadeInTop");
+                    $("#shopping").removeClass("fadeOutTop");
+                }
+                if (count === "owner") {
+                    $("#owners").removeClass("hide-shopping");
+                    $("#owners").addClass("fadeInTop");
+                    $("#owners").removeClass("fadeOutTop");
+                }
+            } else {
+                if (count === $(this).attr("id")) {
+                    $(this).removeClass("active");
+                    count = "";
+                    $(".vehicles-nav").addClass("fadeOutTop");
+                    $("#vehicles-list").addClass("fadeOutBottom");
+                    setTimeout(function() {
+                        $("#vehicles").addClass("hide-vehicles");
+                        $(".vehicles-nav").removeClass("fadeInTop");
+                        $("#vehicles-list").removeClass("fadeInBottom");
+                        $("#shopping").addClass("hide-shopping");
+                        $("#shopping").removeClass("fadeInTop");
+                        $("#owners").addClass("hide-shopping");
+                        $("#owners").removeClass("fadeInTop");
+                    }, 300);
+                    $("#shopping").addClass("fadeOutTop");
+                    $("#owners").addClass("fadeOutTop");
+                } else {
+                    $('#navbarMenu ul li').removeClass("active");
+                    $(this).addClass("active");
+                    count = $(this).attr("id");
+                    if (count !== "vehicleMenu") {
+                        $(".vehicles-nav").addClass("fadeOutTop");
+                        $("#vehicles-list").addClass("fadeOutBottom");
+                        setTimeout(function() {
+                            $("#vehicles").addClass("hide-vehicles");
+                            $(".vehicles-nav").removeClass("fadeInTop");
+                            $("#vehicles-list").removeClass("fadeInBottom");
+                        })
+                    } else {
+                        $("#vehicles").removeClass("hide-vehicles");
+                        $(".vehicles-nav").removeClass("fadeOutTop");
+                        $(".vehicles-nav").addClass("fadeInTop");
+                        $("#vehicles-list").removeClass("fadeOutBottom");
+                        $("#vehicles-list").addClass("fadeInBottom");
+                    }
+                    if (count !== "shoppingTool") {
+                        $("#shopping").addClass("fadeOutTop");
+                        setTimeout(function() {
+                            $("#shopping").addClass("hide-shopping");
+                            $("#shopping").removeClass("fadeInTop");
+                        })
+                    } else {
+                        $("#shopping").removeClass("hide-shopping");
+                        $("#shopping").removeClass("fadeOutTop");
+                        $("#shopping").addClass("fadeInTop");
+                    }
+                    if (count !== "owner") {
+                        $("#owners").removeClass("fadeInTop");
+                        $("#owners").addClass("hide-shopping");
+                        $("#owners").addClass("fadeOutTop");
+
+                    } else {
+                        $("#owners").removeClass("hide-shopping");
+                        $("#owners").removeClass("fadeOutTop");
+                        $("#owners").addClass("fadeInTop");
+                    }
+                }
+            }
+        })
+        $("#vehicles-close").click(function() {
+            $(".vehicles-nav").addClass("fadeOutTop");
+            $(".vehicles-nav").removeClass("fadeInTop");
+            $("#vehicles-list").addClass("fadeOutBottom");
+            $("#vehicles-list").removeClass("fadeInBottom");
+            setTimeout(function() {
+                $("#vehicles").addClass("hide-vehicles");
+            }, 300);
+            $('#navbarMenu ul li').removeClass("active");
+            count = "";
+        })
+        $(".vehicle-product").addClass("vivify fadeInBottom");
+
+        $(".carousel-indicators-config li").click(function() {
+            $(".carousel-indicators-config li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $(".indicators-xs-header").click(function() {
+            $(".carousel-indicators-xs ol").slideToggle();
+            if ($(".indicators-xs-header i").hasClass("transform-rotate")) {
+                $(".indicators-xs-header i").removeClass("transform-rotate");
+            } else {
+                $(".indicators-xs-header i").addClass("transform-rotate");
+            }
+        });
+        $(".carousel-indicators-xs ol li").click(function() {
+            $(".indicators-title span").html($(this).html());
+            $(".carousel-indicators-xs ol").slideUp();
+            $(".indicators-xs-header i").removeClass("transform-rotate");
+            console.log($(this).html());
+        });
+
+        let countC = 0;
+        $(".carousel-control-prev").click(function() {
+            $(".carousel-indicators-config li").removeClass("active");
+            if (countC == 0) {
+                countC = 4;
+            } else {
+                countC--;
+            }
+            $(".carousel-indicators-config li").each(function(i) {
+                if (i == countC) {
+                    $(this).addClass("active");
+                    $(".indicators-title span").html($(this).html());
+                }
+            })
+        });
+        $(".carousel-control-next").click(function() {
+            $(".carousel-indicators-config li").removeClass("active");
+            if (countC == 4) {
+                countC = 0;
+            } else {
+                countC++;
+            }
+            $(".carousel-indicators-config li").each(function(i) {
+                if (i == countC) {
+                    $(this).addClass("active");
+                    $(".indicators-title span").html($(this).html());
+
+                }
+            })
+        });
+
+        function collapse() {
+            let widthWindow = $(window).width();
+            console.log(widthWindow);
+            if (widthWindow > 973) {
+                $(".collapse-ul").removeClass("collapse");
+                // } else if (widthWindow > 973 && widthWindow < 992) {
+                //     $(".collapse-ul").removeClass("collapse");
+
+            } else {
+                $(".collapse-ul").addClass("collapse");
+            }
+        }
+
+        $(window).resize(function() {
+            collapse();
+        })
+        $(document).ready(function() {
+            collapse();
+        })
+    </script>
+</body>
+
+</html>

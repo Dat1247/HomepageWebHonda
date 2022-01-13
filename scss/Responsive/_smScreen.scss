@@ -1,0 +1,164 @@
+@media screen and (max-width: 767.98px) {
+    #vehicles {
+        #vehicles-content {
+            .vehicles-nav {
+                ul {
+                    // text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        border-right: 0;
+                        a {
+                            padding: 0;
+                            &:hover::before {
+                                display: none;
+                            }
+                        }
+                        &.active {
+                            a::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            #vehicles-close {
+                p {
+                    font-size: $fs-1 - 2;
+                }
+            }
+            #vehicles-list {
+                .vehicle-product {
+                    .vehicle-info {
+                        h4 {
+                            font-size: $fs-2;
+                        }
+                        p {
+                            font-size: $fs-1 - 2;
+                        }
+                    }
+                    .vehicle-button {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        button {
+                            padding: $pd-0 - 5 $pd-0 + 2;
+                        }
+                        .btnWhite {
+                            padding: $pd-0 - 5 $pd-2 - 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #our-vehicle {
+        h1 {
+            font-size: $fs-4;
+        }
+        .carousel-control-next,
+        .carousel-control-prev {
+            i {
+                font-size: $fs-3 + 6;
+                padding: $pd-3 $pd-2 - 2;
+            }
+        }
+        .carousel-caption-config {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            left: 50%;
+            bottom: 10%;
+            top: unset;
+            transform: translateX(-50%);
+            font-size: $fs-0 + 2;
+            .carousel-caption-detail {
+                margin-bottom: $mg-1;
+                .carousel-detail-content {
+                    h2 {
+                        font-size: $fs-3;
+                    }
+                    p {
+                        font-size: $fs-0 + 2;
+                    }
+                }
+            }
+        }
+        .carousel-indicators-xs {
+            position: absolute;
+            top: 0;
+            left: 20%;
+            z-index: 10;
+        }
+        .carousel-inner {
+            top: $mg-3;
+        }
+        .carousel-caption-footer {
+            width: 100%;
+            border: none;
+            bottom: 2%;
+            justify-content: center;
+        }
+    }
+    .carousel-control-next {
+        right: 0rem;
+    }
+    .carousel-control-prev {
+        left: 0rem;
+    }
+    #option {
+        .option__item {
+            i {
+                font-size: $fs-5;
+            }
+            h4 {
+                margin: $mg-3 0 $mg-2;
+            }
+        }
+    }
+    #footer {
+        .footer {
+            .footer__contact {
+                border: none;
+                flex-direction: column-reverse;
+                padding: 0;
+                align-items: center !important;
+                .footer__left {
+                    text-align: center !important;
+                    .footer__icon {
+                        margin: $mg-2 0;
+                    }
+                }
+                .footer__right {
+                    text-align: center !important;
+                    p {
+                        font-size: $fs-0 + 3;
+                    }
+                }
+            }
+        }
+        .copyRight {
+            font-size: $fs-0 + 1;
+            .copyRight__policy {
+                display: block;
+                text-align: center;
+                .copyRight__left {
+                    a {
+                        font-size: $fs-0;
+                    }
+                }
+                .copyRight__right {
+                    text-align: center;
+                    margin: 10px 0;
+                }
+            }
+            .copyRight__bottom {
+                width: 100%;
+                text-align: center;
+                p {
+                    font-size: $fs-0;
+                }
+            }
+        }
+    }
+}

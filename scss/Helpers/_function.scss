@@ -1,0 +1,63 @@
+@each $stt,
+$bgcolor in (1, #3c4c5c) (2, #5e5e5e) (3, #14409a) (4, #c0bab5) (5, #5c5c5c) (6, #2c5367) {
+    #img-#{$stt} {
+        background: linear-gradient(#bbbdc0, $color-gray-3, $color-gray-3);
+    }
+    .vehicle-product {
+        &:hover {
+            #img-#{$stt} {
+                background: linear-gradient($bgcolor, $color-gray-3, $color-gray-3);
+            }
+        }
+    }
+    .delay-#{$stt} {
+        animation-delay: 0.2s * $stt;
+    }
+}
+
+@each $stt,
+$img in (1, banner-1) (2, banner-2) (3, banner-3) (4, banner-4) {
+    #swiper-slider {
+        .slide-#{$stt} {
+            background: url("../img/#{$img}.jpg");
+            background-size: cover;
+            background-position: center center;
+            @media screen and (max-width: 768px) {
+                background: url("../../img/#{$img}-xs.jpg");
+                background-position: unset;
+                background-size: cover;
+            }
+            @media screen and (max-width: 576px) {
+                background: url("../../img/#{$img}-xs.jpg");
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    }
+}
+
+@each $stt,
+$img in (1,
+slider-1) (2,
+slider-2) (3,
+slider-3) (4,
+slider-4) (5,
+slider-5) {
+    .carousel-inner {
+        .item-#{$stt} {
+            background: url("../img/#{$img}.jpg");
+            background-size: cover;
+            background-position: center center;
+            @media screen and (max-width: 768px) {
+                background: url("../img/#{$img}-xs.jpg");
+                background-position: unset;
+                background-size: cover;
+            }
+            @media screen and (max-width: 576px) {
+                background: url("../img/#{$img}-xs.jpg");
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    }
+}
