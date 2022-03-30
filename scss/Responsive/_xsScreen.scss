@@ -48,6 +48,41 @@
             }
         }
     }
+    header {
+        #shopping {
+            right: 0;
+            padding: $pd-1 - 2 0 $pd-2;
+            .tool__icon {
+                li {
+                    margin: 0 $mg-0;
+                }
+                a {
+                    padding: 0;
+                    i {
+                        font-size: $fs-3 + 6;
+                        margin: 0 $mg-2;
+                    }
+                    p {
+                        font-size: $fs-0 + 1;
+                    }
+                }
+            }
+            .tool__value {
+                padding: 0 $pd-3;
+                a {
+                    font-size: $fs-0 + 2;
+                }
+            }
+        }
+        .owners {
+            right: 0;
+            padding: $pd-2 - 2;
+            .owners__left,
+            .owners__right {
+                margin-right: $mg-5 - 3;
+            }
+        }
+    }
     .carousel-control-next {
         right: 0rem;
     }

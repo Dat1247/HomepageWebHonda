@@ -67,6 +67,21 @@
                 }
             }
         }
+        #shopping {
+            right: 0;
+            .tool__icon {
+                justify-content: space-between;
+                a {
+                    i {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .owners {
+            right: 50%;
+            transform: translateX(50%);
+        }
     }
     #swiper-slider {
         height: 600px;

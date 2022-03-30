@@ -52,6 +52,34 @@
             }
         }
     }
+    header {
+        #shopping {
+            right: 0;
+            padding: $pd-2 - 2 $pd-1 - 1 $pd-4 - 4;
+            .tool__icon {
+                justify-content: space-between;
+                a {
+                    padding: 0;
+                    i {
+                        font-size: $fs-4 - 4;
+                        margin: 0 $mg-2;
+                    }
+                    p {
+                        font-size: $fs-0 + 1;
+                    }
+                }
+            }
+            .tool__value {
+                a {
+                    font-size: $fs-0 + 2;
+                }
+            }
+        }
+        .owners {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
     #our-vehicle {
         h1 {
             font-size: $fs-4;

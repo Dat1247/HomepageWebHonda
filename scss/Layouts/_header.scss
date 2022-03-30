@@ -34,7 +34,7 @@ header {
                 .nav-link {
                     @include styleText($color-white-0, $fs-1 - 2, $fw-600);
                     padding: $pd-1 - 2 $pd-1;
-                    background-image: linear-gradient(to bottom, $color-white-0 50%, transparent 0);
+                    background-image: linear-gradient( to bottom, $color-white-0 50%, transparent 0);
                     background-size: 200% 200%;
                     background-position: 0 100%;
                     transition: all 0.5s ease;
@@ -98,7 +98,8 @@ header {
         background-color: $color-white-0;
         box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
         padding: 14px 24px 36px;
-        width: 850px;
+        width: 100%;
+        max-width: 850px;
         border-radius: 0 0 4px 4px;
         position: absolute;
         top: 100%;
@@ -150,7 +151,8 @@ header {
         box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
         padding: 36px;
         display: flex;
-        width: 590px;
+        width: 100%;
+        max-width: 590px;
         position: absolute;
         top: 0;
         right: 5%;

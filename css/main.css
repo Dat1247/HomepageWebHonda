@@ -412,7 +412,8 @@ header #shopping {
   background-color: #ffffff;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
   padding: 14px 24px 36px;
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
   border-radius: 0 0 4px 4px;
   position: absolute;
   top: 100%;
@@ -476,7 +477,8 @@ header .owners {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
   padding: 36px;
   display: flex;
-  width: 590px;
+  width: 100%;
+  max-width: 590px;
   position: absolute;
   top: 0;
   right: 5%;
@@ -1439,6 +1441,19 @@ header .hide-shopping {
   header #vehicles #vehicles-content #vehicles-list .vehicle-product .vehicle-info p {
     font-size: 14px;
   }
+  header #shopping {
+    right: 0;
+  }
+  header #shopping .tool__icon {
+    justify-content: space-between;
+  }
+  header #shopping .tool__icon a i {
+    margin: 0;
+  }
+  header .owners {
+    right: 50%;
+    transform: translateX(50%);
+  }
   #swiper-slider {
     height: 600px;
   }
@@ -1546,6 +1561,30 @@ header .hide-shopping {
   }
   #vehicles #vehicles-content #vehicles-list .vehicle-product .vehicle-button .btnWhite {
     padding: 5px 20px;
+  }
+  header #shopping {
+    right: 0;
+    padding: 20px 15px 36px;
+  }
+  header #shopping .tool__icon {
+    justify-content: space-between;
+  }
+  header #shopping .tool__icon a {
+    padding: 0;
+  }
+  header #shopping .tool__icon a i {
+    font-size: 40px;
+    margin: 0 20px;
+  }
+  header #shopping .tool__icon a p {
+    font-size: 11px;
+  }
+  header #shopping .tool__value a {
+    font-size: 12px;
+  }
+  header .owners {
+    right: 50%;
+    transform: translateX(50%);
   }
   #our-vehicle h1 {
     font-size: 44px;
@@ -1677,6 +1716,37 @@ header .hide-shopping {
   }
   #vehicles #vehicles-content #vehicles-list .vehicle-product .vehicle-button .btnWhite {
     padding: 5px 25px;
+  }
+  header #shopping {
+    right: 0;
+    padding: 14px 0 22px;
+  }
+  header #shopping .tool__icon li {
+    margin: 0 5px;
+  }
+  header #shopping .tool__icon a {
+    padding: 0;
+  }
+  header #shopping .tool__icon a i {
+    font-size: 30px;
+    margin: 0 20px;
+  }
+  header #shopping .tool__icon a p {
+    font-size: 11px;
+  }
+  header #shopping .tool__value {
+    padding: 0 30px;
+  }
+  header #shopping .tool__value a {
+    font-size: 12px;
+  }
+  header .owners {
+    right: 0;
+    padding: 20px;
+  }
+  header .owners .owners__left,
+  header .owners .owners__right {
+    margin-right: 50px;
   }
   .carousel-control-next {
     right: 0rem;
